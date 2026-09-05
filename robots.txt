@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/sitemap.xml
