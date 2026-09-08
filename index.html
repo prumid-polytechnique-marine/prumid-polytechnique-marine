@@ -368,7 +368,9 @@
             <strong>N°CC :</strong> 2400701M</p>
           </div>
         </div>
-        <form class="contact-card" action="mailto:prumidpolytechniquemarine@gmail.com" method="post" enctype="text/plain">
+        <form class="contact-card" id="contactForm" action="https://formspree.io/f/mzebkkjg" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande d’intervention - Site PRUMID">
+          <input type="hidden" name="Source" value="Site web PRUMID POLYTECHNIQUE MARINE SARL">
           <h3>Demande de devis / intervention</h3>
           <label>Nom / Entreprise<input type="text" name="Nom" required></label>
           <label>Téléphone<input type="tel" name="Téléphone" required></label>
@@ -384,6 +386,7 @@
           <label>Message<textarea name="Message" rows="5" placeholder="Décrivez brièvement l'équipement et le problème..."></textarea></label>
           <button class="btn primary" type="submit">Préparer la demande par e-mail</button>
           <small>Le bouton ouvre votre application e-mail avec les informations saisies.</small>
+                  <div id="formStatus" class="form-status" aria-live="polite"></div>
         </form>
       </div>
     </section>
