@@ -17,7 +17,7 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        formStatus.textContent = "Merci. Votre demande a bien été transmise à PRUMID POLYTECHNIQUE MARINE SARL. Notre équipe vous répondra dans les meilleurs délais.";
+        formStatus.textContent = "Merci. Votre demande a bien été transmise à PRUMID POLYTECHNIQUE MARINE SARL. Notre équipe technique analysera les informations reçues et reviendra vers vous dans les meilleurs délais.";
         formStatus.className = "form-status success";
         contactForm.reset();
       } else {

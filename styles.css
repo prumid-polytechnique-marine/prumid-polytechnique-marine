@@ -83,3 +83,36 @@ section[id]{scroll-margin-top:100px}
 .form-status.sending{background:#eef6fb;color:#174b70;border:1px solid #d3e3f0}
 .form-status.success{background:#ecf8f0;color:#176a3a;border:1px solid #bfe6ca}
 .form-status.error{background:#fff1f1;color:#9a2c2c;border:1px solid #f0c7c7}
+
+/* VERSION 8 — Technologie, photos terrain et formulaire professionnel */
+.technology-section{background:linear-gradient(135deg,#f7fbff 0%,#eef5fb 100%)}
+.technology-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.tech-tags{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.tech-tags span{background:#fff;border:1px solid #d9e5ef;border-radius:999px;padding:10px 14px;font-weight:700;color:#194f78}
+.team-note{margin-top:24px;padding:20px;border-left:5px solid #f39200;background:#fff;border-radius:12px;box-shadow:0 12px 30px rgba(8,49,82,.08)}
+.team-note strong{display:block;color:#123f65;margin-bottom:6px}
+.team-note span{color:#607788}
+.technology-visual{margin:0;background:#fff;border-radius:18px;padding:14px;box-shadow:0 18px 40px rgba(8,49,82,.12)}
+.technology-visual img{width:100%;height:360px;object-fit:contain;border-radius:12px;background:#fff}
+.technology-visual figcaption{font-size:14px;color:#607788;padding:10px 4px 2px}
+.about-photo{margin:24px 0 8px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(8,49,82,.10)}
+.about-photo img{width:100%;height:360px;object-fit:cover;object-position:center 25%;display:block}
+.about-photo figcaption{padding:12px 16px;color:#607788;font-size:14px}
+.evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+.evidence-grid figure{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(8,49,82,.08)}
+.evidence-grid img{width:100%;height:220px;object-fit:cover;display:block}
+.evidence-grid figcaption{padding:14px}
+.evidence-grid strong,.evidence-grid span{display:block}
+.evidence-grid strong{color:#164f78;margin-bottom:5px}
+.evidence-grid span{color:#687d8e;font-size:14px}
+.contact-card input,.contact-card select,.contact-card textarea{width:100%;box-sizing:border-box}
+.contact-card label{display:block;margin-bottom:14px}
+@media(max-width:900px){
+  .technology-grid{grid-template-columns:1fr}
+  .evidence-grid{grid-template-columns:repeat(2,1fr)}
+  .technology-visual img{height:300px}
+}
+@media(max-width:600px){
+  .evidence-grid{grid-template-columns:1fr}
+  .about-photo img{height:280px}
+}
