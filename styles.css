@@ -116,3 +116,27 @@ section[id]{scroll-margin-top:100px}
   .evidence-grid{grid-template-columns:1fr}
   .about-photo img{height:280px}
 }
+
+/* Version 9 — photos supplémentaires et vidéos de terrain */
+.video-section{background:#fff}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+.video-card{background:#fff;border:1px solid #e2eaf0;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(21,50,75,.08)}
+.video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#0b2436}
+.video-caption{padding:18px 20px}
+.video-caption h3{font-family:Montserrat,sans-serif;color:#135a94;margin:0 0 8px}
+.video-caption p{color:#617789;margin:0}
+.video-note{margin-top:20px;color:#62788a;font-size:14px}
+@media(max-width:900px){.video-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr}}
+
+
+/* Version 10 — illustration des types de bateaux et vidéo groupe électrogène */
+.boat-types-reference{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px;padding:26px;background:#fff;border:1px solid #e2eaf0;border-radius:16px;box-shadow:0 10px 28px rgba(21,50,75,.06)}
+.boat-types-copy h3{font-family:Montserrat,sans-serif;color:#135a94;font-size:clamp(24px,2.6vw,34px);line-height:1.2;margin:4px 0 14px}
+.boat-types-copy p{color:#617789}
+.boat-types-caution{padding:14px 16px;background:#fff4e6;border-left:4px solid #f28a00;border-radius:8px;color:#6b4a1d!important;font-size:14px}
+.boat-types-figure{margin:0;text-align:center}
+.boat-types-figure img{display:block;width:auto;max-width:100%;height:auto;max-height:620px;margin:0 auto;object-fit:contain;border-radius:8px;background:#fff}
+.boat-types-figure figcaption{font-size:12px;color:#6b7e8d;margin-top:8px}
+.video-card-portrait video{height:360px;aspect-ratio:4/5;object-fit:contain;background:#0b2436}
+@media(max-width:700px){.boat-types-reference{grid-template-columns:1fr;padding:18px}.boat-types-figure img{max-height:560px}.video-card-portrait video{height:420px}}
