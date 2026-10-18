@@ -5,7 +5,7 @@ Ajouts :
 - Nouvelle rubrique « Vidéos » avec 3 vidéos locales optimisées pour le web.
 - Vignettes vidéo, lecteurs avec commandes, sans lecture automatique.
 - Lien « Vidéos » ajouté au menu.
-- Le nom de MOTIEN Bile Emmanuel et la mention « Responsable Technologie & Télécommunications » ne sont pas affichés.
+- Aucune information nominative ou fonction interne privée n’est affichée sur le site public.
 
 Publication sur GitHub Pages :
 1. Décompresser ce ZIP.
