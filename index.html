@@ -1,147 +1,742 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bibliothèque technique PRUMID POLYTECHNIQUE MARINE : guides de diagnostic, maintenance et entretien des équipements marins et industriels.">
-<meta name="theme-color" content="#071a3a">
-<title>Bibliothèque technique | PRUMID POLYTECHNIQUE MARINE</title>
-<style>
-:root{--navy:#071a3a;--blue:#0d376b;--gold:#f5b51b;--ink:#15243a;--muted:#64748b;--paper:#f4f7fb;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
-a{color:inherit}img{max-width:100%;display:block}.wrap{width:min(1160px,92%);margin:auto}
-header{background:linear-gradient(125deg,#04112b,#0c3265 65%,#071a3a);color:white;border-bottom:4px solid var(--gold)}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
-.brand{display:flex;align-items:center;gap:1rem;text-decoration:none}.brand img{width:82px;height:82px;object-fit:contain;background:#fff;border-radius:12px;padding:4px}.brand strong{display:block;line-height:1.15;letter-spacing:.04em;font-size:1.05rem}.brand span{color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:.08em}
-nav{display:flex;gap:1rem;flex-wrap:wrap}nav a{font-weight:700;text-decoration:none;color:#fff;font-size:.92rem}nav a:hover{color:var(--gold)}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:2.2rem;padding:2rem 0 3.2rem}
-.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.82rem}
-h1{font-size:clamp(2.25rem,5vw,4.4rem);line-height:1.03;margin:.55rem 0 1rem;letter-spacing:-.04em}
-.hero p{font-size:1.1rem;color:#e1eaf8;max-width:650px}
-.hero img{width:100%;max-height:430px;object-fit:cover;border:2px solid var(--gold);border-radius:20px;box-shadow:0 20px 50px #0004}
-.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.15rem;border-radius:9px;background:var(--gold);color:#101827;font-weight:800;text-decoration:none;border:2px solid var(--gold)}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.03)}.btn.secondary{background:transparent;color:white;border-color:#fff}
-section{padding:3.2rem 0}.section-head{max-width:760px;margin-bottom:1.5rem}.section-head h2{font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.15;margin:.2rem 0 .65rem;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
-.guide-card{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;background:white;border:1px solid #dbe3ee;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px #10264a0b}
-.guide-cover{background:#071a3a;min-height:270px;display:flex;align-items:center;justify-content:center;padding:1rem}.guide-cover img{width:100%;height:100%;max-height:280px;object-fit:contain}
-.guide-body{padding:1.5rem 1.5rem 1.6rem 0}.tag{display:inline-block;background:#fff3cd;color:#74520a;border-radius:99px;padding:.25rem .65rem;font-size:.78rem;font-weight:800}.guide-body h3{font-size:1.5rem;line-height:1.2;margin:.65rem 0}.guide-body p{color:#526177}
-.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1.2rem;padding-left:1.1rem}.features li::marker{color:#c58c00}
-.note{background:#fff8e6;border-left:5px solid var(--gold);padding:1rem 1.2rem;border-radius:8px;color:#604b18;margin-top:1.2rem;font-size:.92rem}
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.tile{background:white;border:1px solid #dbe3ee;border-radius:13px;overflow:hidden;box-shadow:0 5px 18px #10264a08}.tile img{width:100%;height:175px;object-fit:cover}.tile div{padding:.85rem}.tile h3{margin:0;color:var(--navy);font-size:1rem}.tile p{margin:.35rem 0 0;color:var(--muted);font-size:.87rem}
-.cta{background:linear-gradient(125deg,#071a3a,#0d376b);color:white;border-top:4px solid var(--gold);border-bottom:4px solid var(--gold)}.cta h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:.25rem 0 .8rem}.cta p{max-width:780px;color:#e4ecf8;font-size:1.05rem}
-footer{background:#030c1d;color:#e6edf7;padding:2rem 0}.footer-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}.footer-grid strong{color:white}.footer-grid a{color:var(--gold)}.small{font-size:.82rem;color:#b7c4d8}
-@media(max-width:850px){.hero{grid-template-columns:1fr}.hero img{max-height:340px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-card{grid-template-columns:1fr}.guide-cover{min-height:210px}.guide-body{padding:1.25rem}.features{grid-template-columns:1fr}nav{justify-content:flex-start}}
-@media(max-width:480px){.topbar{align-items:flex-start}.brand img{width:60px;height:60px}.brand strong{font-size:.85rem}.gallery{grid-template-columns:1fr}.tile img{height:210px}.actions .btn{width:100%}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PRUMID POLYTECHNIQUE MARINE SARL à Abidjan : maintenance marine et industrielle, diagnostic moteur bateau, groupes électrogènes, pompes, compresseurs, électricité, GPS, télécommunications, réseaux NTIC, Data, vidéosurveillance et assistance technique en Côte d’Ivoire.">
+  <meta name="keywords" content="maintenance marine Abidjan, diagnostic moteur bateau Abidjan, réparation moteur hors-bord Côte d’Ivoire, maintenance groupe électrogène Abidjan, maintenance industrielle Côte d’Ivoire, télécommunications Abidjan, réseau NTIC, vidéosurveillance Abidjan, Data, GPS, PRUMID POLYTECHNIQUE MARINE SARL, offshore, Oil & Gas">
+  <meta name="theme-color" content="#0f4f87">
+
+  <meta property="og:title" content="PRUMID POLYTECHNIQUE MARINE SARL">
+  <meta property="og:description" content="Maintenance marine et industrielle, diagnostic électronique, électricité, mécanique, technologie, télécommunications et assistance technique à Abidjan et en Côte d’Ivoire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/">
+  <meta property="og:image" content="https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/logo-prumid.jpg">
+  <link rel="canonical" href="https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/">
+
+  <title>PRUMID POLYTECHNIQUE MARINE SARL | Maintenance marine & industrielle à Abidjan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "PRUMID POLYTECHNIQUE MARINE SARL",
+  "url": "https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/",
+  "logo": "https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/logo-prumid.jpg",
+  "email": "prumidpolytechniquemarine@gmail.com",
+  "telephone": [
+    "+2250102024984",
+    "+2250759072984"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Abidjan",
+    "addressCountry": "CI",
+    "postalCode": "21 BP 729 Abidjan 21"
+  },
+  "areaServed": [
+    "Abidjan",
+    "Côte d'Ivoire"
+  ],
+  "description": "Maintenance marine et industrielle, diagnostic électronique, moteurs marins, groupes électrogènes, pompes, compresseurs, électricité, GPS, vidéosurveillance et assistance technique."
+}
+  </script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="topbar">
-      <a class="brand" href="../index.html" aria-label="Accueil PRUMID">
-        <img src="assets/logo-prumid.jpeg" alt="Logo PRUMID POLYTECHNIQUE MARINE">
-        <span><strong>PRUMID<br>POLYTECHNIQUE MARINE</strong><span>FORMATION • DIAGNOSTIC • MAINTENANCE</span></span>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#accueil" aria-label="Accueil PRUMID">
+        <img src="logo-prumid.jpg" alt="Logo PRUMID POLYTECHNIQUE MARINE SARL">
+        <div>
+          <strong>PRUMID</strong>
+          <span>POLYTECHNIQUE MARINE SARL</span>
+        </div>
       </a>
-      <nav aria-label="Navigation principale">
-        <a href="../index.html">Accueil</a>
-        <a href="#guides">Guides PDF</a>
-        <a href="#domaines">Domaines techniques</a>
+      <button class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="#apropos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#technologie">Technologie</a>
+        <a href="#secteurs">Secteurs</a>
+        <a href="#pourquoi">Pourquoi nous ?</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#methode">Méthode</a>
+        <a href="#galerie">Galerie photos</a>
+        <a href="#expertises-visuelles">Nos expertises en images</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#mission">Mission</a>
+        <a href="#zones">Zones</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
-    <div class="hero">
-      <div>
-        <div class="eyebrow">La connaissance technique à portée de clic</div>
-        <h1>La Bibliothèque Technique PRUMID</h1>
-        <p>Comprendre. Diagnostiquer. Entretenir. Découvrez nos ressources pédagogiques conçues pour accompagner les techniciens, mécaniciens, électriciens et responsables de maintenance dans leurs interventions.</p>
-        <div class="actions">
-          <a class="btn" href="#guides">📘 Découvrir le guide disponible</a>
-          <a class="btn secondary" href="#domaines">Explorer les domaines</a>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Entreprise ivoirienne • Abidjan</span>
+          <h1>Maintenance marine & industrielle.<br><span>Fiabilité, sécurité, réactivité.</span></h1>
+          <p>Diagnostic électronique, inspection, maintenance préventive et corrective, mécanique, électricité, énergie et solutions technologiques pour vos équipements à Abidjan et en Côte d’Ivoire.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://wa.me/2250102024984?text=Bonjour%20PRUMID%20%F0%9F%91%8B%F0%9F%8F%BE%0AJe%20souhaite%20demander%20une%20intervention.%0A%0ANom%20%2F%20Entreprise%20%3A%20%0ASecteur%20%2F%20D%C3%A9partement%20%3A%20%0AType%20d%E2%80%99%C3%A9quipement%20%2F%20embarcation%20%3A%20%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ALocalisation%20%3A%20%0ANiveau%20d%E2%80%99urgence%20%3A%20%0A%0AJe%20peux%20transmettre%20des%20photos%20ou%20vid%C3%A9os%20si%20n%C3%A9cessaire." target="_blank" rel="noopener">Demander une intervention</a>
+            <a class="btn secondary" href="#services">Découvrir nos services</a>
+          </div>
+          <div class="hero-badges">
+            <span>✓ Qualité</span><span>✓ Sécurité</span><span>✓ Traçabilité</span><span>✓ Réactivité</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="logo-prumid.jpg" alt="PRUMID POLYTECHNIQUE MARINE SARL">
+          <p><strong>Une panne d’équipement peut immobiliser toute une activité.</strong><br>Anticiper, c’est éviter l’arrêt.</p>
         </div>
       </div>
-      <img src="assets/couverture-collection-technique.png" alt="Couverture de la collection de guides techniques PRUMID">
-    </div>
-  </div>
-</header>
+    </section>
 
-<main>
-<section id="guides">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Téléchargements</div>
-      <h2>Les guides techniques disponibles</h2>
-      <p>Commencez par notre guide consacré au groupe électrogène. Les autres titres seront ajoutés à cette bibliothèque lorsqu’ils seront prêts à être publiés.</p>
-    </div>
-    <article class="guide-card">
-      <div class="guide-cover"><img src="assets/groupe-electrogene-atelier.png" alt="Groupe électrogène diesel en atelier"></div>
-      <div class="guide-body">
-        <span class="tag">GUIDE PDF • ÉDITION 2026</span>
-        <h3>Groupe électrogène — Diagnostic • Maintenance • Entretien</h3>
-        <p>Un support pédagogique pour organiser les observations, contrôles, recherches de pannes et opérations de suivi d’un groupe électrogène diesel.</p>
-        <ul class="features">
-          <li>Fonctionnement et composants principaux</li>
-          <li>Inspection initiale et sécurité</li>
-          <li>Protocole de diagnostic en 20 tests</li>
-          <li>Tableaux de symptômes et pistes de diagnostic</li>
-          <li>Cas pratiques et exercices corrigés</li>
-          <li>Entretien et fiches de suivi</li>
-        </ul>
-        <div class="actions">
-          <a class="btn" href="documents/PRUMID-Manuel-Groupe-Electrogene-100-pages-avec-annexe.pdf" target="_blank" rel="noopener">📖 Lire le manuel en ligne</a>
-          <a class="btn" href="documents/PRUMID-Manuel-Groupe-Electrogene-100-pages-avec-annexe.pdf" download>⬇ Télécharger le PDF</a>
+    <section id="apropos" class="section">
+      <div class="container split">
+        <div>
+          <span class="section-kicker">Qui sommes-nous ?</span>
+          <h2>Un partenaire technique pour vos opérations maritimes et industrielles</h2>
         </div>
-        <div class="note"><strong>Important :</strong> ce guide est une aide pédagogique générale. Il ne remplace pas le manuel du constructeur, une formation pratique ni les procédures de sécurité du site. Les interventions et mesures à risque doivent être réalisées par des personnes qualifiées et autorisées.</div>
+        <div class="lead">
+          <p>PRUMID POLYTECHNIQUE MARINE SARL est une entreprise ivoirienne spécialisée dans les services techniques, la maintenance marine et industrielle à Abidjan et en Côte d’Ivoire.</p>
+          <p>Nous accompagnons les particuliers, entreprises, exploitants maritimes et industriels avec des solutions adaptées à leurs équipements et à leurs besoins, dans une logique de qualité, sécurité, fiabilité, réactivité et traçabilité.</p>
+          <figure class="about-photo">
+            <img src="prumid-responsable-terrain.webp" alt="Professionnel PRUMID en tenue de sécurité lors d’une activité technique">
+            <figcaption>Présence terrain, sécurité et suivi technique au cœur des interventions PRUMID.</figcaption>
+          </figure>
+          <div class="mini-points">
+            <span>Maintenance marine</span>
+            <span>Groupes électrogènes</span>
+            <span>Diagnostic électronique</span>
+            <span>Interventions à Abidjan & lagunes</span>
+          </div>
+
+        </div>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<section id="domaines" style="background:#eaf0f7">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Nos domaines d’intérêt</div>
-      <h2>Une bibliothèque au service de la maintenance</h2>
-      <p>Les visuels ci-dessous illustrent les familles d’équipements abordées par l’univers technique PRUMID. Ils ne représentent pas tous des guides PDF disponibles au téléchargement à ce jour.</p>
-    </div>
-    <div class="gallery">
-      <article class="tile"><img src="assets/groupe-electrogene-turquoise.jpg" alt="Groupe électrogène industriel"><div><h3>Groupes électrogènes</h3><p>Diagnostic, inspection et entretien.</p></div></article>
-      <article class="tile"><img src="assets/moteur-electrique.png" alt="Moteur électrique industriel"><div><h3>Moteurs électriques</h3><p>Principes, contrôles et maintenance.</p></div></article>
-      <article class="tile"><img src="assets/moteur-industriel.png" alt="Technicien inspectant un moteur industriel"><div><h3>Maintenance industrielle</h3><p>Observation, fiabilité et suivi des équipements.</p></div></article>
-      <article class="tile"><img src="assets/installation-electrique.png" alt="Installation électrique et équipements techniques"><div><h3>Installations électriques</h3><p>Contrôles et bonnes pratiques de sécurité.</p></div></article>
-      <article class="tile"><img src="assets/grue-levage-industriel.png" alt="Grue de levage industriel"><div><h3>Levage industriel</h3><p>Équipements, inspection et prévention des risques.</p></div></article>
-      <article class="tile"><img src="assets/systemes-industriels.png" alt="Collage de systèmes industriels et utilitaires"><div><h3>Systèmes et utilités</h3><p>Panorama des équipements techniques.</p></div></article>
-    </div>
-  </div>
-</section>
+    <section id="services" class="section alt">
+      <div class="container">
+        <span class="section-kicker">Nos services</span>
+        <h2>Des interventions techniques ciblées et complètes</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">💨</div>
+            <h3>Compresseurs d’air</h3>
+            <p>Diagnostic, maintenance préventive et corrective, contrôle pression/température/vibrations, fuites, filtres, moteurs et protections.</p>
+          </article>
+          <article class="card">
+            <div class="icon">⚡</div>
+            <h3>Groupes électrogènes</h3>
+            <p>Diagnostic électrique et mécanique, vidange, filtres, refroidissement, lubrification, batteries, démarrage, alternateurs et puissance.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💧</div>
+            <h3>Pompes & pompage</h3>
+            <p>Diagnostic, entretien et dépannage de pompes, contrôle roulements, garnitures, accouplements, vibrations, moteurs et commandes.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🏗️</div>
+            <h3>Grues & levage</h3>
+            <p>Maintenance mécanique et électrique, systèmes hydrauliques, commandes, capteurs, dispositifs de sécurité et inspection fonctionnelle.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚤</div>
+            <h3>Moteurs marins & industriels</h3>
+            <p>Moteurs hors-bord et in-bord, diesel et essence, motorisations auxiliaires, diagnostic, entretien, réparation et remise en service.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🔌</div>
+            <h3>Électricité • Technologie • Télécoms</h3>
+            <p>Électricité, installation et réhabilitation, réseaux NTIC, Data, TV, vidéosurveillance, GPS, géolocalisation, connectivité et assistance technique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="cta">
-  <div class="wrap">
-    <div class="eyebrow">Passez à l’action</div>
-    <h2>Votre prochain diagnostic commence ici !</h2>
-    <p>Enrichissez vos connaissances, préparez mieux vos interventions et partagez les bonnes pratiques de maintenance. Téléchargez le guide PRUMID, gardez-le à portée de main et revenez régulièrement découvrir les prochaines ressources.</p>
-    <div class="actions">
-      <a class="btn" href="documents/PRUMID-Manuel-Groupe-Electrogene-100-pages-avec-annexe.pdf" download>⬇ Télécharger le guide maintenant</a>
-      <a class="btn secondary" href="mailto:prumidpolytechmarine@gmail.com?subject=Biblioth%C3%A8que%20Technique%20PRUMID">Demander des informations</a>
-    </div>
-  </div>
-</section>
-</main>
+    <section id="secteurs" class="section dark">
+      <div class="container">
+        <span class="section-kicker light">Secteurs d’intervention</span>
+        <h2>Nous intervenons là où la disponibilité des équipements est critique</h2>
+        <div class="sector-grid">
+          <div>⚓ Maritime</div>
+          <div>🌊 Offshore</div>
+          <div>🛢️ Oil & Gas</div>
+          <div>🏭 Industrie</div>
+          <div>🏗️ BTP</div>
+          <div>⚡ Énergie</div>
+          <div>🚛 Flottes</div>
+          <div>📡 Technologie</div>
+          <div>🏢 Entreprises</div>
+        </div>
+      </div>
+    </section>
 
-<footer id="contact">
-  <div class="wrap footer-grid">
-    <div>
-      <strong>PRUMID POLYTECHNIQUE MARINE SARL</strong>
-      <div class="small">Votre partenaire en diagnostic, maintenance et réparation des équipements marins et industriels.</div>
+
+
+    <section id="technologie" class="section technology-section">
+      <div class="container technology-grid">
+        <div class="technology-copy">
+          <span class="section-kicker">Département Technologie & Télécommunications</span>
+          <h2>Connectivité, réseaux, sécurité électronique et solutions technologiques</h2>
+          <p>PRUMID développe son pôle Technologie pour accompagner les entreprises, sites industriels, installations terrestres, navires et plateformes dans le déploiement et la maintenance de leurs systèmes de communication et d’information.</p>
+          <div class="tech-tags">
+            <span>📡 Télécommunications</span>
+            <span>🌐 Réseaux NTIC</span>
+            <span>🗄️ Data & équipements réseau</span>
+            <span>📹 Caméras & vidéosurveillance</span>
+            <span>📺 TV & distribution audiovisuelle</span>
+            <span>🛰️ GPS & géolocalisation</span>
+            <span>🔌 Câblage & connectivité</span>
+            <span>🚢 Solutions embarquées</span>
+          </div>
+        </div>
+        <figure class="technology-visual">
+          <img src="prumid-geolocalisation-telecom.webp" alt="Schéma de télécommunications, GPS, réseau et géolocalisation pour solutions technologiques PRUMID">
+          <figcaption>Solutions de communication, localisation et transmission de données pour environnements terrestres et maritimes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="pourquoi" class="section">
+      <div class="container">
+        <span class="section-kicker">Pourquoi choisir PRUMID ?</span>
+        <h2>Une approche technique orientée disponibilité, sécurité et traçabilité</h2>
+        <div class="why-grid">
+          <div class="why-item"><strong>01</strong><h3>Diagnostic structuré</h3><p>Analyse méthodique des pannes afin d’identifier les causes et limiter les immobilisations inutiles.</p></div>
+          <div class="why-item"><strong>02</strong><h3>Maintenance préventive</h3><p>Programmes d’entretien adaptés aux équipements, à leurs heures de fonctionnement et aux contraintes d’exploitation.</p></div>
+          <div class="why-item"><strong>03</strong><h3>Traçabilité</h3><p>Fiches d’intervention, contrôles, rapports techniques et suivi des opérations pour une meilleure maîtrise de vos actifs.</p></div>
+          <div class="why-item"><strong>04</strong><h3>Réactivité</h3><p>Une entreprise basée à Abidjan, au plus près des besoins maritimes, industriels, énergétiques et BTP.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="realisations" class="section alt">
+      <div class="container">
+        <span class="section-kicker">Nos interventions</span>
+        <h2>Prestations techniques & domaines d’intervention</h2>
+        <div class="project-grid">
+          <article class="project-card"><span>🚤</span><h3>Maintenance moteurs marins</h3><p>Révisions périodiques, diagnostic électronique, vidanges, filtres, bougies, contrôles de fonctionnement et remise en service.</p></article>
+          <article class="project-card"><span>⚡</span><h3>Groupes électrogènes</h3><p>Entretien moteur Diesel, batteries, systèmes de démarrage, alternateurs, circuits électriques et essais de fonctionnement.</p></article>
+          <article class="project-card"><span>💨</span><h3>Compresseurs & équipements</h3><p>Recherche de panne, maintenance, contrôle pression/température/vibrations, circuits d’air, moteurs et protections.</p></article>
+          <article class="project-card"><span>🔧</span><h3>Assistance technique</h3><p>Inspection, installation, réhabilitation, GPS, géolocalisation, vidéosurveillance et accompagnement technique.</p></article>
+        </div>
+        <div class="evidence-grid">
+          <figure><img src="prumid-diagnostic-texa.webp" alt="Valise de diagnostic électronique TEXA pour moteurs marins"><figcaption><strong>Diagnostic TEXA</strong><span>Outils et connectiques pour analyse électronique.</span></figcaption></figure>
+          <figure><img src="prumid-moteur-yamaha-enduro.webp" alt="Moteur hors-bord Yamaha Enduro sur embarcation"><figcaption><strong>Moteur hors-bord Yamaha</strong><span>Inspection, entretien et maintenance marine.</span></figcaption></figure>
+          <figure><img src="prumid-cat-maintenance.webp" alt="Filtre carburant Caterpillar sur équipement industriel"><figcaption><strong>Maintenance industrielle</strong><span>Contrôle de filtration et systèmes moteur.</span></figcaption></figure>
+          <figure><img src="prumid-moteur-nanni.webp" alt="Moteur marin Nanni en inspection"><figcaption><strong>Moteur marin Nanni</strong><span>Contrôle mécanique, circuit carburant et diagnostic.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="methode" class="section">
+      <div class="container">
+        <span class="section-kicker">Notre méthode d’intervention</span>
+        <h2>Diagnostic, travaux, essais et traçabilité</h2>
+        <p class="method-intro">PRUMID structure ses interventions pour améliorer la sécurité, la fiabilité et le suivi technique des équipements.</p>
+        <div class="method-grid">
+          <article><span>01</span><h3>Identifier</h3><p>Informations client, équipement, site d’intervention et symptômes signalés.</p></article>
+          <article><span>02</span><h3>Diagnostiquer</h3><p>Contrôles, vérifications, mesures, défauts détectés et observations techniques.</p></article>
+          <article><span>03</span><h3>Intervenir</h3><p>Maintenance préventive ou corrective, pièces, lubrifiants et consommables utilisés.</p></article>
+          <article><span>04</span><h3>Tester</h3><p>Essais après intervention : démarrage, charge, refroidissement, commandes et fonctionnement.</p></article>
+          <article><span>05</span><h3>Tracer</h3><p>Commentaires techniques, recommandations, rapport d’intervention et historique de maintenance.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="galerie" class="section alt">
+      <div class="container">
+        <span class="section-kicker">Galerie terrain & équipements</span>
+        <h2>Des environnements réels : marine, offshore, diagnostic et maintenance</h2>
+        <p class="gallery-intro">Cette galerie présente des équipements, embarcations et environnements techniques illustrant les domaines dans lesquels PRUMID déploie son savoir-faire.</p>
+        <div class="gallery-grid gallery-authentic">
+          <figure class="gallery-card featured-photo">
+            <img src="prumid-offshore-service.webp" alt="Bateau de service offshore à proximité d’une installation maritime">
+            <figcaption><strong>Opérations offshore</strong><span>Environnement maritime, transfert et assistance technique.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-icm-nautical.webp" alt="Navire de service ICM Nautical II en mer">
+            <figcaption><strong>Navire de service</strong><span>Exploitation, support et environnement professionnel maritime.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-bateau-offshore.webp" alt="Embarcation de travail rouge en environnement offshore">
+            <figcaption><strong>Embarcation offshore</strong><span>Support opérationnel et interventions en mer.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-yamaha-embarcation.webp" alt="Moteur Yamaha Enduro installé sur une embarcation pneumatique">
+            <figcaption><strong>Propulsion hors-bord</strong><span>Inspection et maintenance des systèmes de propulsion.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-diagnostic-moteur.webp" alt="Faisceaux et connecteurs d’un moteur hors-bord lors d’un diagnostic">
+            <figcaption><strong>Diagnostic moteur</strong><span>Contrôle électrique, connectique et recherche de panne.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-bateau-moderne.webp" alt="Bateau motorisé moderne équipé pour navigation et électronique">
+            <figcaption><strong>Navigation & systèmes embarqués</strong><span>Moteurs, électronique, GPS, communication et connectivité.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-terrain-marine.webp" alt="Professionnel en environnement marin et technique">
+            <figcaption><strong>Présence terrain</strong><span>Interventions techniques dans les environnements maritimes.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-cat-maintenance.webp" alt="Équipement Caterpillar avec filtre carburant lors d’une maintenance">
+            <figcaption><strong>Équipements industriels</strong><span>Maintenance mécanique, filtration et contrôles moteur.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-bateau-semirigide.jpg" alt="Bateau semi-rigide préparé sur sa remorque">
+            <figcaption><strong>Bateaux semi-rigides</strong><span>Préparation et suivi d’embarcations de service.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-console-lowrance.jpg" alt="Console de pilotage équipée d’un écran Lowrance">
+            <figcaption><strong>Électronique marine</strong><span>Équipements de navigation et systèmes embarqués.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-embase-helice.jpg" alt="Embase et hélice d’un moteur hors-bord en inspection">
+            <figcaption><strong>Propulsion & hélice</strong><span>Inspection visuelle des éléments de propulsion.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-groupe-electrogene.jpg" alt="Groupe électrogène industriel en cours d’inspection">
+            <figcaption><strong>Groupes électrogènes</strong><span>Contrôle et maintenance des équipements de production électrique.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-inspection-equipe.jpg" alt="Équipe technique autour d’une embarcation">
+            <figcaption><strong>Inspection technique</strong><span>Échanges et contrôles autour d’un équipement maritime.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="real-moteur-suzuki.jpg" alt="Moteur hors-bord Suzuki sur une embarcation">
+            <figcaption><strong>Moteurs hors-bord</strong><span>Observation et suivi des moteurs marins.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-diagnostic-pupitre.webp" alt="Pupitre de commande d’un groupe électrogène CAT et ordinateur de diagnostic" loading="lazy">
+            <figcaption><strong>Diagnostic sur pupitre de commande</strong><span>Lecture des paramètres et contrôles techniques à l’aide d’un ordinateur.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-compresseur-visuel.webp" alt="Compresseur d’air mobile rouge et gris monté sur remorque" loading="lazy">
+            <figcaption><strong>Compresseur mobile</strong><span>Illustration d’un compresseur d’air mobile et de ses commandes.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-moteur-inbord-bleu.webp" alt="Moteur marin in-bord bleu dans un compartiment de bateau" loading="lazy">
+            <figcaption><strong>Moteur marin in-bord</strong><span>Inspection visuelle du moteur et des équipements associés.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-compartiment-moteur-marin.webp" alt="Moteur diesel et équipements auxiliaires dans un compartiment marin" loading="lazy">
+            <figcaption><strong>Compartiment moteur marin</strong><span>Moteur, admission d’air et auxiliaires à examiner lors d’une inspection.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-intervention-portuaire.webp" alt="Technicien près d’un moteur hors-bord dans un environnement portuaire" loading="lazy">
+            <figcaption><strong>Environnement portuaire</strong><span>Photo de terrain illustrant les équipements de propulsion marine.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="prumid-photo-technicien-tenue-prumid.webp" alt="Technicien en tenue de travail PRUMID" loading="lazy">
+            <figcaption><strong>Équipe et présentation terrain</strong><span>Tenue professionnelle pour les activités et interventions techniques.</span></figcaption>
+          </figure>
+        </div>
+        <div class="boat-types-reference">
+          <div class="boat-types-copy">
+            <span class="section-kicker">Repère visuel</span>
+            <h3>Différents types d’embarcations</h3>
+            <p>Cette illustration présente plusieurs catégories de bateaux et d’embarcations. Elle peut aider à décrire le type de bateau concerné lors d’une demande de diagnostic, d’inspection ou de maintenance.</p>
+            <p class="boat-types-caution">Illustration indicative : la faisabilité d’une intervention dépend du type d’embarcation, de la marque, du modèle, de l’état de l’équipement et des travaux demandés. Contactez PRUMID pour confirmer la prise en charge.</p>
+          </div>
+          <figure class="boat-types-figure">
+            <img src="types-embarcations-reference.jpg" alt="Illustration de différentes catégories de bateaux : bateau de pêche, catamaran, canoë, bateau de plaisance, bateau de service et autres embarcations">
+            <figcaption>Illustration de référence — légendes de l’image d’origine en anglais.</figcaption>
+          </figure>
+        </div>
+        <p class="gallery-note">Les visuels du site pourront être enrichis progressivement par les nouvelles interventions PRUMID : date, site, équipement, nature des travaux et résultats.</p>
+      </div>
+    </section>
+
+
+    <section id="expertises-visuelles" class="section expertise-section">
+      <div class="container">
+        <span class="section-kicker">Nos expertises en images</span>
+        <h2>Des solutions pour la marine, l’énergie, la sécurité et les installations</h2>
+        <p class="gallery-intro">Découvrez les équipements et technologies associés aux domaines d’intervention de PRUMID : moteurs marins, groupes électrogènes, compresseurs, vidéosurveillance, électricité et géolocalisation.</p>
+
+        <div class="expertise-group">
+          <h3>Marine, moteurs, bateaux et équipements de navigation</h3>
+          <div class="expertise-grid">
+            <figure class="expertise-card">
+              <img src="prumid-bateau-moderne.webp" alt="Bateau de plaisance moderne équipé de moteurs hors-bord" loading="lazy">
+              <figcaption><strong>Bateaux et yachts</strong><span>Embarcations de plaisance, bateaux de service et équipements marins.</span></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-photo-yacht-plaisance.webp" alt="Yacht de plaisance dans un port" loading="lazy">
+              <figcaption><strong>Yachts de plaisance</strong><span>Maintenance, inspection et assistance technique selon les besoins du bateau.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="real-moteur-suzuki.jpg" alt="Moteur marin hors-bord Suzuki" loading="lazy">
+              <figcaption><strong>Moteurs hors-bord</strong><span>Contrôle, diagnostic et maintenance des systèmes de propulsion.</span></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-photo-moteur-inbord-bleu.webp" alt="Moteur marin in-bord bleu dans un compartiment de bateau" loading="lazy">
+              <figcaption><strong>Moteurs in-bord et compartiments moteur</strong><span>Inspection visuelle des équipements mécaniques et de leurs auxiliaires.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="real-console-lowrance.jpg" alt="Console de pilotage et écran électronique de navigation" loading="lazy">
+              <figcaption><strong>Équipements et packs bateau</strong><span>Console, électronique de navigation et équipements embarqués.</span></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-moteur-yamaha-enduro.webp" alt="Moteur hors-bord Yamaha installé sur une embarcation" loading="lazy">
+              <figcaption><strong>Propulsion marine</strong><span>Suivi des moteurs, inspection des éléments visibles et conseils d’entretien.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="expertise-group">
+          <h3>Groupes électrogènes, énergie et compresseurs</h3>
+          <div class="expertise-grid">
+            <figure class="expertise-card">
+              <img src="prumid-photo-diagnostic-pupitre.webp" alt="Pupitre de commande d’un groupe électrogène CAT et ordinateur de diagnostic" loading="lazy">
+              <figcaption><strong>Diagnostic de groupe électrogène</strong><span>Contrôle de la commande et analyse technique des paramètres disponibles.</span></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="real-groupe-electrogene.jpg" alt="Groupe électrogène industriel avec panneau de commande ouvert" loading="lazy">
+              <figcaption><strong>Maintenance des groupes électrogènes</strong><span>Inspection, entretien préventif et recherche de défauts.</span></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-illustration-groupes-electrogenes.webp" alt="Illustration de plusieurs modèles de groupes électrogènes" loading="lazy">
+              <figcaption><strong>Groupes électrogènes de différents formats</strong><span>Solutions de production électrique portables, mobiles et stationnaires.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-illustration-groupes-electrogenes-industriels.webp" alt="Illustration de groupes électrogènes industriels et mobiles" loading="lazy">
+              <figcaption><strong>Énergie industrielle</strong><span>Équipements de secours et de production électrique pour différents sites.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-photo-compresseur-visuel.webp" alt="Compresseur d’air mobile rouge et gris monté sur remorque" loading="lazy">
+              <figcaption><strong>Compresseurs d’air</strong><span>Inspection et maintenance selon le modèle, l’usage et les prescriptions du fabricant.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="expertise-group">
+          <h3>Sécurité, vidéosurveillance, électricité et géolocalisation</h3>
+          <div class="expertise-grid">
+            <figure class="expertise-card">
+              <img src="prumid-photo-videosurveillance-residence.webp" alt="Maison équipée de caméras de vidéosurveillance" loading="lazy">
+              <figcaption><strong>Résidences et domaines privés</strong><span>Étude de solutions de vidéosurveillance pour les accès et les zones sensibles.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-illustration-cameras-surveillance.webp" alt="Illustration de plusieurs types de caméras de surveillance" loading="lazy">
+              <figcaption><strong>Vidéosurveillance embarquée et industrielle</strong><span>Étude de caméras adaptées aux bateaux, ateliers, installations et sites professionnels.</span><small>Illustration indicative — les équipements dépendent de l’étude du site.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-photo-installation-electrique.webp" alt="Technicien effectuant une mesure électrique dans une armoire" loading="lazy">
+              <figcaption><strong>Installations électriques et multimédia</strong><span>Contrôles électriques et étude de solutions de câblage, réseau et équipements connectés.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-photo-geolocalisation-nautique.webp" alt="Utilisateur consultant une carte à bord d’un bateau" loading="lazy">
+              <figcaption><strong>Géolocalisation et navigation</strong><span>Solutions de positionnement et de suivi à étudier selon l’équipement et l’usage.</span><small>Visuel illustratif — vérifier les droits d’utilisation avant publication.</small></figcaption>
+            </figure>
+            <figure class="expertise-card">
+              <img src="prumid-geolocalisation-telecom.webp" alt="Schéma de géolocalisation et de communication d’un navire" loading="lazy">
+              <figcaption><strong>Technologie et télécommunications</strong><span>Géolocalisation, transmission de données et systèmes de communication.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="expertise-contact"><p>Vous avez un bateau, un groupe électrogène, un compresseur ou un site à équiper ?</p><a class="btn primary" href="#contact">Demander une étude ou un devis</a></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section video-section">
+      <div class="container">
+        <span class="section-kicker">PRUMID en vidéo</span>
+        <h2>Découvrez quelques séquences du terrain</h2>
+        <p class="gallery-intro">Visionnez ces séquences consacrées aux embarcations, aux opérations de préparation et aux activités techniques. Utilisez les commandes du lecteur pour lancer la vidéo.</p>
+        <div class="video-grid">
+          <article class="video-card">
+            <video controls playsinline preload="metadata" poster="video-poster-embarcation.jpg">
+              <source src="video-prumid-embarcation-preparation.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Embarcation & préparation</h3><p>Présentation d’une embarcation semi-rigide et de son environnement de préparation.</p></div>
+          </article>
+          <article class="video-card">
+            <video controls playsinline preload="metadata" poster="video-poster-travaux-embarcation.jpg">
+              <source src="video-prumid-travaux-embarcation.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Travaux sur embarcation</h3><p>Séquence de terrain autour d’une embarcation et de ses équipements.</p></div>
+          </article>
+          <article class="video-card">
+            <video controls playsinline preload="metadata" poster="video-poster-equipe-technique.jpg">
+              <source src="video-prumid-equipe-technique.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Équipe & environnement technique</h3><p>Images d’une activité de terrain et d’échanges autour d’équipements.</p></div>
+          </article>
+          <article class="video-card video-card-portrait">
+            <video controls playsinline preload="metadata" poster="video-poster-groupe-electrogene.jpg">
+              <source src="video-reference-essai-groupe-electrogene.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Essai en charge d’un groupe électrogène</h3><p>Vidéo de référence montrant un groupe électrogène en fonctionnement. Cette séquence est illustrative et ne prétend pas documenter une intervention réalisée par PRUMID.</p></div>
+          </article>
+        </div>
+        <div class="video-subheading">
+          <h3>Diagnostic et inspection d’un groupe électrogène</h3>
+          <p>Quatre séquences de terrain illustrant des étapes de contrôle visuel, de diagnostic et d’inspection des éléments du groupe électrogène.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card video-card-portrait">
+            <video controls playsinline preload="metadata" poster="video-poster-diagnostic-groupe-electrogene.webp">
+              <source src="video-prumid-diagnostic-groupe-electrogene.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Diagnostic et préparation</h3><p>Séquence de terrain avec les instruments et équipements préparés pour les contrôles.</p></div>
+          </article>
+          <article class="video-card video-card-portrait">
+            <video controls playsinline preload="metadata" poster="video-poster-inspection-groupe-electrogene.webp">
+              <source src="video-prumid-inspection-groupe-electrogene.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Inspection du compartiment moteur</h3><p>Observation du moteur et de composants accessibles dans le groupe électrogène.</p></div>
+          </article>
+          <article class="video-card video-card-portrait">
+            <video controls playsinline preload="metadata" poster="video-poster-controle-auxiliaires.webp">
+              <source src="video-prumid-controle-auxiliaires.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Contrôle des éléments périphériques</h3><p>Séquence d’inspection visuelle des équipements et auxiliaires du groupe.</p></div>
+          </article>
+          <article class="video-card video-card-portrait">
+            <video controls playsinline preload="metadata" poster="video-poster-inspection-refroidissement.webp">
+              <source src="video-prumid-inspection-refroidissement.mp4" type="video/mp4">
+              Votre navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-caption"><h3>Inspection mécanique et refroidissement</h3><p>Observation des éléments visibles autour du ventilateur, des courroies et du refroidissement.</p></div>
+          </article>
+        </div>
+        <p class="video-note">Les vidéos se lancent uniquement lorsque le visiteur appuie sur Lecture, afin de préserver le confort de navigation et la consommation de données. Certaines séquences sont présentées à titre de référence et ne correspondent pas nécessairement à des interventions réalisées par PRUMID.</p>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container mission">
+        <div>
+          <span class="section-kicker">Notre mission</span>
+          <h2>Prévenir les pannes et prolonger la vie de vos équipements</h2>
+          <p>Parce que la maintenance préventive est un investissement dans la sécurité, la disponibilité et la continuité de votre activité.</p>
+        </div>
+        <div class="mission-list">
+          <div><strong>01</strong><span>Prévenir les pannes</span></div>
+          <div><strong>02</strong><span>Réduire les immobilisations</span></div>
+          <div><strong>03</strong><span>Améliorer la fiabilité</span></div>
+          <div><strong>04</strong><span>Prolonger la durée de vie</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="zones" class="section commercial-section">
+      <div class="container commercial-grid">
+        <div>
+          <span class="section-kicker">Zones & types d’intervention</span>
+          <h2>Une assistance technique adaptée à vos opérations</h2>
+          <p>PRUMID intervient à Abidjan et accompagne les besoins maritimes, industriels et énergétiques selon la nature des équipements et des opérations.</p>
+          <div class="zone-tags">
+            <span>Abidjan</span><span>Zones portuaires</span><span>Lagunes</span>
+            <span>Sites industriels</span><span>Bases techniques</span><span>Interventions sur site</span>
+          </div>
+        </div>
+        <div class="commercial-card">
+          <h3>Préparez votre demande d’intervention</h3>
+          <p>Pour accélérer l’analyse, merci de préciser :</p>
+          <ul>
+            <li>Type d’équipement ou d’embarcation</li>
+            <li>Marque / modèle si disponible</li>
+            <li>Symptôme ou panne constatée</li>
+            <li>Localisation du site</li>
+            <li>Photos ou informations utiles</li>
+          </ul>
+          <a class="btn primary full-btn" href="https://wa.me/2250102024984?text=Bonjour%20PRUMID%20%F0%9F%91%8B%F0%9F%8F%BE%0AJe%20souhaite%20demander%20une%20intervention.%0A%0ANom%20%2F%20Entreprise%20%3A%20%0ASecteur%20%2F%20D%C3%A9partement%20%3A%20%0AType%20d%E2%80%99%C3%A9quipement%20%2F%20embarcation%20%3A%20%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ALocalisation%20%3A%20%0ANiveau%20d%E2%80%99urgence%20%3A%20%0A%0AJe%20peux%20transmettre%20des%20photos%20ou%20vid%C3%A9os%20si%20n%C3%A9cessaire." target="_blank" rel="noopener">Demander une intervention sur WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <span class="section-kicker light">Besoin d’assistance ?</span>
+          <h2>Diagnostic, maintenance, réparation ou programme d’entretien</h2>
+          <p>Parlez-nous de votre équipement, de la panne ou du programme d’entretien souhaité. Nous vous répondrons rapidement.</p>
+        </div>
+        <a class="btn white" href="https://wa.me/2250759072984?text=Bonjour%20PRUMID%20%F0%9F%91%8B%F0%9F%8F%BE%0AJe%20souhaite%20demander%20une%20intervention.%0A%0ANom%20%2F%20Entreprise%20%3A%20%0ASecteur%20%2F%20D%C3%A9partement%20%3A%20%0AType%20d%E2%80%99%C3%A9quipement%20%2F%20embarcation%20%3A%20%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ALocalisation%20%3A%20%0ANiveau%20d%E2%80%99urgence%20%3A%20%0A%0AJe%20peux%20transmettre%20des%20photos%20ou%20vid%C3%A9os%20si%20n%C3%A9cessaire." target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+      </div>
+    </section>
+
+
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <span class="section-kicker">Questions fréquentes</span>
+        <h2>Avant une intervention</h2>
+        <div class="faq-grid">
+          <details>
+            <summary>Quels équipements prenez-vous en charge ?</summary>
+            <p>Nous intervenons notamment sur moteurs marins hors-bord et in-bord, groupes électrogènes, pompes, compresseurs, équipements électriques, réseaux NTIC, vidéosurveillance, GPS, télécommunications et autres équipements techniques associés.</p>
+          </details>
+          <details>
+            <summary>Intervenez-vous uniquement à Abidjan ?</summary>
+            <p>PRUMID est basé à Abidjan et étudie les interventions selon la localisation du site, la nature de l’équipement et les contraintes d’accès.</p>
+          </details>
+          <details>
+            <summary>Quels éléments faut-il fournir pour un diagnostic ?</summary>
+            <p>Idéalement : type d’équipement, marque, modèle, symptômes constatés, localisation et photos ou vidéos utiles.</p>
+          </details>
+          <details>
+            <summary>Proposez-vous de la maintenance préventive ?</summary>
+            <p>Oui. PRUMID propose des opérations d’entretien préventif afin de réduire les arrêts, améliorer la fiabilité et prolonger la durée de vie des équipements.</p>
+          </details>
+          <details>
+            <summary>Comment demander un devis ?</summary>
+            <p>Vous pouvez utiliser le bouton WhatsApp du site, envoyer un e-mail ou remplir la section de demande d’intervention avec les informations techniques disponibles.</p>
+          </details>
+          <details>
+            <summary>Fournissez-vous un rapport d’intervention ?</summary>
+            <p>Selon la prestation, l’intervention peut être documentée par des contrôles, observations, recommandations, essais et éléments de traçabilité technique.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div>
+          <span class="section-kicker">Contact</span>
+          <h2>PRUMID POLYTECHNIQUE MARINE SARL</h2>
+          <p class="tagline">Qualité – Sécurité est notre Passion</p>
+          <div class="legal-strip">
+            <span>RCCM : CI-ABJ-03-2024-B12-00936</span>
+            <span>N° CC : 2400701M</span>
+            <span>21 BP 729 Abidjan 21</span>
+          </div>
+          <div class="contact-list">
+            <p><strong>📍 Adresse :</strong> Abidjan – Côte d’Ivoire<br>21 BP 729 Abidjan 21</p>
+            <p><strong>📧 E-mail :</strong> <a href="mailto:prumidpolytechniquemarine@gmail.com">prumidpolytechniquemarine@gmail.com</a></p>
+            <p><strong>📱 Téléphones :</strong><br>
+              <a href="tel:+2250102024984">(+225) 01 02 02 49 84</a><br>
+              <a href="tel:+2250759072984">(+225) 07 59 07 29 84</a>
+            </p>
+            <p><strong>RCCM :</strong> CI-ABJ-03-2024-B12-00936<br>
+            <strong>N°CC :</strong> 2400701M</p>
+          </div>
+        </div>
+        <form class="contact-card" id="contactForm" action="https://formspree.io/f/mzebkkjg" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande d’intervention - Site PRUMID">
+          <input type="hidden" name="Source" value="Site web PRUMID POLYTECHNIQUE MARINE SARL">
+          <h3>Demande de devis / intervention</h3>
+
+          <label>Nom et prénom *
+            <input type="text" name="Nom_Prenom" required>
+          </label>
+          <label>Entreprise / Organisation
+            <input type="text" name="Entreprise_Organisation">
+          </label>
+          <label>Téléphone / WhatsApp *
+            <input type="tel" name="Telephone_WhatsApp" required>
+          </label>
+          <label>E-mail *
+            <input type="email" name="email" required>
+          </label>
+
+          <label>Type de demande *
+            <select name="Type_Demande" required>
+              <option value="">Sélectionnez...</option>
+              <option>Diagnostic</option>
+              <option>Inspection</option>
+              <option>Maintenance préventive</option>
+              <option>Maintenance corrective</option>
+              <option>Réparation</option>
+              <option>Installation</option>
+              <option>Réhabilitation</option>
+              <option>Assistance technique</option>
+              <option>Demande de devis</option>
+              <option>Autre</option>
+            </select>
+          </label>
+
+          <label>Secteur / Département *
+            <select name="Secteur_Departement" required>
+              <option value="">Sélectionnez...</option>
+              <option>Maritime</option>
+              <option>Offshore</option>
+              <option>Oil & Gas</option>
+              <option>Industrie</option>
+              <option>BTP</option>
+              <option>Énergie</option>
+              <option>Flotte</option>
+              <option>Technologie</option>
+              <option>Autre</option>
+            </select>
+          </label>
+
+          <label>Type d’équipement / embarcation *
+            <input type="text" name="Equipement_Embarcation" required placeholder="Ex. moteur hors-bord, groupe électrogène, caméra, routeur...">
+          </label>
+          <label>Type de moteur / système
+            <input type="text" name="Type_Moteur_Systeme">
+          </label>
+          <label>Marque
+            <input type="text" name="Marque">
+          </label>
+          <label>Modèle
+            <input type="text" name="Modele">
+          </label>
+          <label>Numéro de série
+            <input type="text" name="Numero_Serie">
+          </label>
+
+          <label>Localisation du site *
+            <input type="text" name="Localisation" required>
+          </label>
+          <label>Niveau d’urgence
+            <select name="Niveau_Urgence">
+              <option>Normal</option>
+              <option>Urgent</option>
+              <option>Équipement immobilisé</option>
+            </select>
+          </label>
+          <label>Photos / vidéos disponibles
+            <select name="Photos_Videos_Disponibles">
+              <option>Oui</option>
+              <option>Non</option>
+            </select>
+          </label>
+          <label>Problème rencontré / intervention souhaitée *
+            <textarea name="Message" rows="6" required placeholder="Décrivez les symptômes, alarmes, défauts constatés ou le travail souhaité..."></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Envoyer la demande à PRUMID</button>
+          <small>Votre demande sera transmise automatiquement à PRUMID. Une confirmation s’affichera après l’envoi.</small>
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo-prumid.jpg" alt="">
+        <div><strong>PRUMID POLYTECHNIQUE MARINE SARL</strong><br><span>Abidjan – Côte d’Ivoire</span></div>
+      </div>
+      <div class="footer-right"><p>© <span id="year"></span> PRUMID POLYTECHNIQUE MARINE SARL. Tous droits réservés.</p><p class="footer-seo">Maintenance marine • Industrielle • Diagnostic • Électricité • Mécanique • Technologie • Télécommunications • Abidjan, Côte d’Ivoire</p></div>
     </div>
-    <div>
-      <div>Téléphone : <a href="tel:+2250102024984">(+225) 0102024984</a></div>
-      <div>Téléphone : <a href="tel:+2250759072984">(+225) 0759072984</a></div>
-      <div>E-mail : <a href="mailto:prumidpolytechmarine@gmail.com">prumidpolytechmarine@gmail.com</a></div>
-      <div>Site : <a href="https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/">prumid-polytechnique-marine.github.io</a></div>
-    </div>
-  </div>
-  <div class="wrap small" style="margin-top:1rem">© PRUMID POLYTECHNIQUE MARINE — Collection technique, édition octobre 2026. Références éditoriales internes, non assimilables à des numéros légaux.</div>
-</footer>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/2250102024984?text=Bonjour%20PRUMID%20%F0%9F%91%8B%F0%9F%8F%BE%0AJe%20souhaite%20demander%20une%20intervention.%0A%0ANom%20%2F%20Entreprise%20%3A%20%0ASecteur%20%2F%20D%C3%A9partement%20%3A%20%0AType%20d%E2%80%99%C3%A9quipement%20%2F%20embarcation%20%3A%20%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ALocalisation%20%3A%20%0ANiveau%20d%E2%80%99urgence%20%3A%20%0A%0AJe%20peux%20transmettre%20des%20photos%20ou%20vid%C3%A9os%20si%20n%C3%A9cessaire." target="_blank" rel="noopener" aria-label="Contacter PRUMID sur WhatsApp">WhatsApp</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
