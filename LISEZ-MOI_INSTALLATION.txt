@@ -1,0 +1,38 @@
+PRUMID POLYTECHNIQUE MARINE — INSTALLATION DE LA BIBLIOTHÈQUE TECHNIQUE
+Édition : octobre 2026
+
+CONTENU DU DOSSIER
+- index.html : page complète de la Bibliothèque Technique.
+- assets/ : logo et images d’illustration.
+- documents/ : manuel PDF du groupe électrogène.
+- ../PRUMID_Lien_Bibliotheque_Site_Principal.html (fourni séparément) : extrait pour ajouter le lien depuis l’accueil.
+
+INSTALLATION SUR GITHUB PAGES
+1. Ouvrez le dépôt GitHub qui publie le site PRUMID.
+2. À la racine du dépôt, créez un dossier nommé exactement : bibliotheque-technique
+3. Téléversez dans ce dossier le fichier index.html et les dossiers assets et documents en conservant cette structure :
+   bibliotheque-technique/
+     index.html
+     assets/
+       logo-prumid.jpeg
+       couverture-collection-technique.png
+       ...
+     documents/
+       PRUMID-Manuel-Groupe-Electrogene-100-pages-avec-annexe.pdf
+4. Validez avec Commit changes.
+5. Pour rendre la bibliothèque visible depuis l’accueil, ouvrez le index.html principal du site.
+   Ajoutez le lien <a href="bibliotheque-technique/index.html">Bibliothèque technique</a>
+   dans le menu de navigation. Vous pouvez vous inspirer du fichier PRUMID_Lien_Bibliotheque_Site_Principal.html.
+6. Validez le changement, puis attendez la publication GitHub Pages.
+7. Testez l’adresse :
+   https://prumid-polytechnique-marine.github.io/prumid-polytechnique-marine/bibliotheque-technique/
+
+IMPORTANT
+- Le kit contient un seul manuel PDF disponible à ce jour : le guide groupe électrogène.
+- Les autres images illustrent des domaines techniques ; elles ne sont pas présentées comme des PDF téléchargeables.
+- Les images ajoutées ici ont été fournies dans cette conversation. Vérifiez leurs droits et autorisations avant publication publique.
+- Le manuel est un support pédagogique général et ne remplace pas les procédures constructeur ni les consignes de sécurité.
+- Les guides GTPM-02 à GTPM-11 mentionnés dans le fichier LISEZ-MOI ne sont pas inclus dans ce kit car les PDF correspondants n’ont pas été fournis dans cette étape.
+
+EN CAS DE DIFFICULTÉ DE TÉLÉVERSEMENT
+Le PDF pèse environ 13,4 Mo. Vous pouvez téléverser les dossiers/fichiers séparément dans l’interface GitHub, en créant les sous-dossiers au besoin.
