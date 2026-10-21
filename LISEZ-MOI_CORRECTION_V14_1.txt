@@ -1,0 +1,21 @@
+PRUMID POLYTECHNIQUE MARINE SARL
+CORRECTION V14.1 — PHOTOS ET COUVERTURE
+
+Cette correction règle les images qui n’apparaissent pas sur le site.
+Les deux pages HTML utilisent désormais des chemins simples vers les fichiers images placés à la racine du dépôt GitHub.
+
+FICHIERS À TÉLÉVERSER :
+- index.html
+- bibliotheque-technique.html
+- les 10 fichiers .webp fournis dans cette archive
+
+INSTALLATION :
+1. Décompressez cette archive sur votre ordinateur.
+2. Ouvrez le dépôt GitHub prumid-polytechnique-marine.
+3. À la racine du dépôt (au même niveau que index.html), choisissez Add file > Upload files.
+4. Glissez-déposez index.html, bibliotheque-technique.html et les 10 fichiers .webp. Ne téléversez pas le dossier parent ni le ZIP.
+5. Remplacez les fichiers HTML existants lorsque GitHub le propose, puis validez sur la branche main.
+6. Attendez le déploiement GitHub Pages, puis actualisez le site avec Ctrl+F5.
+
+IMPORTANT : ne placez pas les fichiers .webp dans un sous-dossier pour cette correction. Ils doivent être à la racine du dépôt, à côté de index.html.
+Cette archive est une correction ciblée : elle ne remplace pas styles.css, les vidéos ni les documents PDF.
