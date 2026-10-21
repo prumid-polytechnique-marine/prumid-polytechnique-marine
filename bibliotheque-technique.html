@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bibliothèque Technique PRUMID : guide illustré de groupe électrogène, catalogue de 15 thèmes de formation et ressources visuelles de maintenance marine et industrielle.">
+  <meta name="theme-color" content="#082f52">
+  <title>Formation — Bibliothèque Technique PRUMID</title>
+  <style>
+    :root{--navy:#061a39;--blue:#0b4774;--gold:#ffbd2e;--orange:#f28a00;--ink:#15324b;--muted:#617789;--pale:#f3f7fb;--line:#dce6ef}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.6;color:var(--ink);background:#fff}a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:linear-gradient(135deg,var(--navy),#0b4774);color:#fff;padding:24px 0 42px;border-bottom:5px solid var(--gold)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:34px}.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:72px;height:72px;object-fit:contain;border-radius:50%;background:white}.brand strong{display:block;font-size:22px;line-height:1.2}.brand span{font-size:12px;color:#d6e5f6;letter-spacing:.1em;font-weight:800}.back{color:#fff;text-decoration:none;font-weight:800;border:1px solid #7194b5;border-radius:999px;padding:10px 16px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-weight:900;font-size:13px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:10px 0 16px}.hero p{font-size:18px;color:#e4effa;max-width:680px}.hero-cover{width:100%;max-height:440px;object-fit:cover;object-position:center 20%;border:3px solid var(--gold);border-radius:16px;box-shadow:0 18px 44px #0004}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:13px 18px;border-radius:10px;text-decoration:none;font-weight:900;background:var(--orange);color:#fff}.btn.alt{background:transparent;border:1px solid #90afc9;color:#fff}.btn.light{background:#fff;color:var(--blue);border:1px solid var(--line)}
+    section{padding:60px 0}.section-alt{background:var(--pale)}h2{font-size:clamp(27px,3.4vw,40px);line-height:1.15;color:var(--blue);margin:0 0 12px}.lead{font-size:17px;color:var(--muted);max-width:820px;margin:0 0 26px}.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.download-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 28px #15324b0d}.download-card .pad{padding:24px}.download-card .icon{font-size:32px}.pill{display:inline-block;background:#fff1d4;color:#8b4d00;font-weight:900;font-size:11px;letter-spacing:.06em;padding:5px 9px;border-radius:999px}.download-card h3{font-size:22px;line-height:1.25;color:var(--blue);margin:12px 0 8px}.download-card p{color:var(--muted);margin:0 0 18px}.file-meta{font-size:13px;color:#748797;margin-top:12px}.download-link{display:inline-block;background:var(--orange);color:white;padding:11px 14px;border-radius:9px;font-weight:900;text-decoration:none}.topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.topic{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.topic b{display:block;color:var(--blue);margin-bottom:5px}.topic p{font-size:14px;color:var(--muted);margin:0 0 10px}.status{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;font-weight:900;color:#546d80;background:#edf3f7;border-radius:999px;padding:4px 8px}.status.ready{color:#075f3c;background:#dcf8e8}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.photo-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.photo-card img{width:100%;height:220px;object-fit:cover;display:block;background:#e9eff5}.photo-card figcaption{padding:14px 16px}.photo-card strong{display:block;color:var(--blue)}.photo-card span{font-size:13px;color:var(--muted)}.note{margin-top:24px;background:#fff8e7;border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;color:#684c1c}.note strong{color:#4f3600}footer{background:#031127;color:#dce7f7;padding:26px 0;border-top:4px solid var(--gold)}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-inner a{color:var(--gold)}.small{font-size:13px;color:#b6c7d8}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-cover{max-height:350px;object-position:center 18%}.topics,.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.downloads{grid-template-columns:1fr}}
+    @media(max-width:560px){.topics,.photo-grid{grid-template-columns:1fr}.photo-card img{height:230px}.topbar{align-items:flex-start}.brand img{width:58px;height:58px}.brand strong{font-size:18px}.actions .btn{width:100%;text-align:center}section{padding:46px 0}}
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Retour au site PRUMID">
+        <img src="logo-prumid-embleme.jpg" alt="Emblème PRUMID bleu et or">
+        <div><strong>PRUMID POLYTECHNIQUE MARINE</strong><span>FORMATION • DOCUMENTATION TECHNIQUE</span></div>
+      </a>
+      <a class="back" href="index.html">← Retour au site officiel</a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Comprendre • Diagnostiquer • Entretenir</span>
+        <h1>La Bibliothèque Technique PRUMID</h1>
+        <p>Un espace de ressources pédagogiques pour les techniciens, mécaniciens, électriciens et responsables de maintenance. Retrouvez le guide technique illustré sur les groupes électrogènes, le catalogue de la collection 2026 et des visuels pour accompagner l’apprentissage.</p>
+        <div class="actions">
+          <a class="btn" href="#telechargements">Télécharger les documents ↓</a>
+          <a class="btn alt" href="#themes">Voir les thèmes de formation</a>
+        </div>
+      </div>
+      <img class="hero-cover" src="assets/formation/couverture-collection-technique.webp" alt="Couverture de la collection technique PRUMID">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="telechargements">
+    <div class="wrap">
+      <span class="eyebrow">Documents disponibles</span>
+      <h2>Téléchargez les ressources PRUMID</h2>
+      <p class="lead">Les boutons ci-dessous pointent vers les fichiers PDF inclus dans le site. Le guide de groupe électrogène est un support pédagogique général : il ne remplace pas la notice constructeur, une formation pratique ou les procédures de sécurité du site.</p>
+      <div class="downloads">
+        <article class="download-card">
+          <div class="pad">
+            <span class="pill">GUIDE TECHNIQUE • GTPM-01-2026</span>
+            <h3>Diagnostic, maintenance et entretien d’un groupe électrogène</h3>
+            <p>Manuel illustré couvrant la sécurité, les composants, les contrôles, un protocole de diagnostic en 20 tests, les arbres de décision, les cas pratiques et les fiches de suivi.</p>
+            <a class="download-link" href="documents/PRUMID_Guide_Technique_Groupe_Electrogene_2026.pdf" download>Télécharger le guide PDF ↓</a>
+            <div class="file-meta">PDF • 105 pages dans le fichier • Édition 2026</div>
+          </div>
+        </article>
+        <article class="download-card">
+          <div class="pad">
+            <span class="pill">CATALOGUE • ÉDITION 2026</span>
+            <h3>Catalogue des 15 guides techniques</h3>
+            <p>Répertoire des thèmes de première orientation : symptômes, contrôles de base, sécurité et fiches de diagnostic, pour les équipements marins, domestiques, routiers et industriels.</p>
+            <a class="download-link" href="documents/PRUMID_Catalogue_Guides_Techniques.pdf" download>Télécharger le catalogue PDF ↓</a>
+            <div class="file-meta">PDF • 1 page • Présentation des 15 thèmes</div>
+          </div>
+        </article>
+      </div>
+      <div class="note"><strong>Note pédagogique :</strong> les contrôles électriques, les essais en charge et toute intervention sur un équipement sous énergie sont réservés aux personnes qualifiées et autorisées. Toujours appliquer les procédures du site et la documentation du fabricant.</div>
+    </div>
+  </section>
+
+  <section id="themes" class="section-alt">
+    <div class="wrap">
+      <span class="eyebrow">Programme de la collection</span>
+      <h2>15 thèmes de formation</h2>
+      <p class="lead">Le catalogue présente les thèmes ci-dessous. Dans cette première mise en ligne, les fichiers téléchargeables disponibles sont le catalogue complet et le guide illustré sur le groupe électrogène. Les autres guides pourront être ajoutés lorsqu’ils seront finalisés.</p>
+      <div class="topics">
+        <article class="topic"><b>01 • Groupe électrogène</b><p>Carburant, démarrage, refroidissement, tension, charge.</p><span class="status ready">Guide PDF disponible</span></article>
+        <article class="topic"><b>02 • Ventilateur électrique</b><p>Alimentation, bruit, vibration, surchauffe.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>03 • Climatiseur</b><p>Débit d’air, manque de froid, évacuation d’eau.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>04 • Moteur hors-bord</b><p>Carburant, refroidissement, hélice, entretien.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>05 • Moteur in-bord</b><p>Huile, refroidissement, fumée, vibrations.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>06 • Waverunner / motomarine</b><p>Admission, alarmes, turbine, rinçage.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>07 • Moto</b><p>Batterie, chaîne, pneus, freins.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>08 • Voiture légère</b><p>Batterie, voyants, niveaux, démarrage.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>09 • Véhicule poids lourd</b><p>Pression d’air, alertes, pneus, charge.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>10 • Tracteur agricole</b><p>Prise de force, refroidissement, hydraulique.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>11 • Poids lourd avec remorque</b><p>Attelage, éclairage, pneus, freinage, arrimage.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>12 • Moteurs électriques</b><p>Types, plaque signalétique, surchauffe, protections.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>13 • Grues et appareils de levage</b><p>Crochets, câbles, freins, limiteurs et CMU.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>14 • Résidence / maison</b><p>Électricité domestique, plomberie, climatisation, sécurité.</p><span class="status">Référencé au catalogue</span></article>
+        <article class="topic"><b>15 • Site industriel / usine</b><p>Machines, consignation, alarmes, GMAO et fuites.</p><span class="status">Référencé au catalogue</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="illustrations">
+    <div class="wrap">
+      <span class="eyebrow">Galerie pédagogique</span>
+      <h2>Photos et repères visuels</h2>
+      <p class="lead">Les images suivantes complètent la bibliothèque et illustrent différents environnements, équipements et outils de maintenance. Certaines sont des illustrations pédagogiques ou des visuels de référence : elles ne sont pas présentées comme la preuve d’une intervention précise réalisée par PRUMID.</p>
+      <div class="photo-grid">
+        <figure class="photo-card"><img src="assets/formation/environnement-portuaire.webp" alt="Barge et installation portuaire" loading="lazy"><figcaption><strong>Environnement portuaire</strong><span>Visuel de référence d’un environnement industriel et maritime, non rattaché à une mission PRUMID précise.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/systemes-industriels-utilitaires.webp" alt="Collage de systèmes industriels et utilitaires" loading="lazy"><figcaption><strong>Systèmes industriels et utilitaires</strong><span>Panorama illustratif : moteurs, levage, électricité et équipements de bâtiment.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/groupe-electrogene-diesel.webp" alt="Groupe électrogène diesel" loading="lazy"><figcaption><strong>Groupe électrogène diesel</strong><span>Repérage visuel d’un ensemble moteur-alternateur.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/moteur-electrique-composants.webp" alt="Vue éclatée pédagogique d’un moteur électrique" loading="lazy"><figcaption><strong>Moteur électrique — composants</strong><span>Vue éclatée des principaux éléments du moteur.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/inspection-moteur-electrique.webp" alt="Technicien inspectant un moteur électrique industriel" loading="lazy"><figcaption><strong>Inspection d’un moteur électrique</strong><span>Illustration pédagogique d’un contrôle visuel d’équipement industriel.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/outillage-maintenance.webp" alt="Coffret d’outils de maintenance" loading="lazy"><figcaption><strong>Outillage de maintenance</strong><span>Outils manuels pour préparer les interventions.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/moteur-hors-bord.webp" alt="Moteur marin hors-bord" loading="lazy"><figcaption><strong>Moteur hors-bord</strong><span>Équipement marin destiné à l’inspection et à l’entretien.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/environnement-embarcations.webp" alt="Embarcations dans un environnement portuaire" loading="lazy"><figcaption><strong>Environnement des embarcations</strong><span>Contexte de maintenance et d’exploitation nautique.</span></figcaption></figure>
+        <figure class="photo-card"><img src="assets/formation/intervention-moteur-marin.webp" alt="Technicien inspectant un moteur marin" loading="lazy"><figcaption><strong>Intervention sur moteur marin</strong><span>Illustration d’une observation visuelle avant diagnostic.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><div><strong>PRUMID POLYTECHNIQUE MARINE SARL</strong><div class="small">Abidjan – Côte d’Ivoire • Diagnostic • Maintenance • Entretien</div></div><div><a href="tel:+2250102024984">(+225) 010 20 24 984</a> • <a href="tel:+2250759072984">(+225) 07 59 07 29 84</a><div class="small"><a href="mailto:prumidpolytechmarine@gmail.com">prumidpolytechmarine@gmail.com</a></div></div></div></footer>
+</body>
+</html>
