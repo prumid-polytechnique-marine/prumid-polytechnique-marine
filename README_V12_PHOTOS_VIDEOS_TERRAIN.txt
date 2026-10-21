@@ -23,3 +23,9 @@ Publication GitHub Pages :
 Les quatre nouvelles vidéos ont été recompressées pour réduire leur poids. La vidéo commerciale en espagnol avec le numéro d’un vendeur tiers n’a pas été ajoutée.
 
 Cette archive contient les fichiers du site ; elle ne publie pas elle-même les changements sur GitHub.
+
+
+CORRECTIF LOGO (20/10/2026)
+- Nouveau logo bleu et or installé dans logo-prumid.jpg.
+- Emblème séparé installé dans logo-prumid-embleme.jpg pour l’en-tête et le pied de page.
+- index.html mis à jour pour utiliser le nouvel emblème.
